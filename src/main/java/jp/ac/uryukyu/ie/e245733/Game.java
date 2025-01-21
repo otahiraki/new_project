@@ -14,7 +14,7 @@ public class Game {
         do {
             initializeGame();
             play();
-            playAgain = promptReplay();
+            playAgain = Replay();
         } while (playAgain);
     }
 
@@ -45,7 +45,7 @@ public class Game {
     }
 
     // 再挑戦するかどうか
-    private boolean promptReplay() {
+    private boolean Replay() {
         System.out.print("もう一度プレイしますか？ (y/n): ");
         String input = scanner.next().toLowerCase();
         return input.equals("y");
